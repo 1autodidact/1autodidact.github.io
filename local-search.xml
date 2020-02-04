@@ -8,7 +8,7 @@
     <link href="/2020/02/02/test/"/>
     <url>/2020/02/02/test/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<pre><code>    package wen.ming.game;    import java.awt.Graphics2D;    import java.awt.image.BufferedImage;    import java.io.File;    import java.io.IOException;    import java.awt.Image;    import javax.imageio.ImageIO;    /**     * 滚动背景     *      * @author mingrong     *     */    public class BackgroundImage extends GameObject {        public int x1 = 0;        public int x2 = 50;        public int y2 = 25;        public static final int SPEED = 4;// 滚动速度        public BackgroundImage() {        }        /**         * 滚动         */        public void roll() {             x1 -= SPEED;// 第一幅图片左移             if (x1 &lt;= -50) {// 如果第一幅图片移出屏幕                 x1 =50;// 回到屏幕右侧             }    }    }</code></pre>]]></content>
     
     
     
