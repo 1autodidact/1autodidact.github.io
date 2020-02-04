@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png"><link rel="icon" type="image/png" href="/img/favicon.png"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="description" content=""><meta name="author" content="John Doe"><meta name="keywords" content=""><title>GoogleGame ~ Hexo</title><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.10.2/css/all.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/mdbootstrap/4.8.9/css/mdb.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/3.0.1/github-markdown.min.css"><link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css"><link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css"><meta name="generator" content="Hexo 4.2.0"></head><body><header style="height:70vh"><nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"><div class="container"><a class="navbar-brand" href="/">&nbsp;<strong>Autodidact</strong>&nbsp;</a> <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><div class="animated-icon"><span></span><span></span><span></span></div></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ml-auto text-center"><li class="nav-item"><a class="nav-link" href="/">Home</a></li><li class="nav-item"><a class="nav-link" href="/archives/">Archives</a></li><li class="nav-item"><a class="nav-link" href="/categories/">Categories</a></li><li class="nav-item"><a class="nav-link" href="/tags/">Tags</a></li><li class="nav-item"><a class="nav-link" href="/about/">About</a></li><li class="nav-item" id="search-btn"><a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i class="iconfont icon-search"></i>&nbsp;&nbsp;</a></li></ul></div></div></nav><div class="view intro-2" id="background" style="background:url(/img/cc.jpg) no-repeat center center;background-size:cover;background-attachment:fixed"><div class="full-bg-img"><div class="mask rgba-black-light flex-center"><div class="container text-center white-text fadeInUp"><span class="h2" id="subtitle"></span><br><p class="mt-3"><i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp; Tuesday, February 4th 2020, 6:35 pm</p><p>&nbsp;<i class="far fa-chart-bar"></i> <span class="post-count">1.5k 字 </span>&nbsp; &nbsp;<i class="far fa-clock"></i> <span class="post-count">8 分钟 </span>&nbsp; &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp; <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span> 次 </span>&nbsp;</p></div></div></div></div></header><main><div class="container-fluid"><div class="row"><div class="d-none d-lg-block col-lg-2"></div><div class="col-lg-8 nopadding-md"><div class="py-5 z-depth-3" id="board"><div class="post-content mx-auto" id="post"><div class="markdown-body"><p>##实现效果</p><blockquote><p><img src="/artitleimg/googleDinosaur.jpg" srcset="/img/loading.gif" alt=""></p></blockquote><blockquote><p>滚动背景模块</p></blockquote><pre><code> package wen.ming.game;
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png"><link rel="icon" type="image/png" href="/img/favicon.png"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="description" content=""><meta name="author" content="John Doe"><meta name="keywords" content=""><title>GoogleGame ~ Hexo</title><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.10.2/css/all.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/mdbootstrap/4.8.9/css/mdb.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/3.0.1/github-markdown.min.css"><link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css"><link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css"><meta name="generator" content="Hexo 4.2.0"></head><body><header style="height:70vh"><nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"><div class="container"><a class="navbar-brand" href="/">&nbsp;<strong>Autodidact</strong>&nbsp;</a> <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><div class="animated-icon"><span></span><span></span><span></span></div></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav ml-auto text-center"><li class="nav-item"><a class="nav-link" href="/">Home</a></li><li class="nav-item"><a class="nav-link" href="/archives/">Archives</a></li><li class="nav-item"><a class="nav-link" href="/categories/">Categories</a></li><li class="nav-item"><a class="nav-link" href="/tags/">Tags</a></li><li class="nav-item"><a class="nav-link" href="/about/">About</a></li><li class="nav-item" id="search-btn"><a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i class="iconfont icon-search"></i>&nbsp;&nbsp;</a></li></ul></div></div></nav><div class="view intro-2" id="background" style="background:url(/img/cc.jpg) no-repeat center center;background-size:cover;background-attachment:fixed"><div class="full-bg-img"><div class="mask rgba-black-light flex-center"><div class="container text-center white-text fadeInUp"><span class="h2" id="subtitle"></span><br><p class="mt-3"><i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp; Tuesday, February 4th 2020, 6:35 pm</p><p>&nbsp;<i class="far fa-chart-bar"></i> <span class="post-count">1.5k 字 </span>&nbsp; &nbsp;<i class="far fa-clock"></i> <span class="post-count">8 分钟 </span>&nbsp; &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp; <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span> 次 </span>&nbsp;</p></div></div></div></div></header><main><div class="container-fluid"><div class="row"><div class="d-none d-lg-block col-lg-2"></div><div class="col-lg-8 nopadding-md"><div class="py-5 z-depth-3" id="board"><div class="post-content mx-auto" id="post"><div class="markdown-body"><p>##实现效果</p><blockquote><p><img src="/artitleimg/googleDinosaur.jpg" srcset="/img/loading.gif" alt=""></p></blockquote><blockquote><p>滚动背景模块</p></blockquote><pre><code>package wen.ming.game;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -29,283 +29,435 @@ public class BackgroundImage extends GameObject {
              x1 =50;// 回到屏幕右侧
          }
 }
-}</code></pre>>常量设置模块 ``` package wen.ming.game;<p>public class Constant {<br>public static final int GAME_WIDTH = 793;<br>public static final int GAME_HEIGHT = 324;<br>}</p><pre><code>
-&gt;恐龙对象的创建</code></pre><p>package wen.ming.game;<br>import java.awt.Graphics;<br>import java.awt.Image;<br>import java.awt.Rectangle;<br>import java.awt.event.KeyEvent;</p><p>public class Dinasaur extends GameObject {<br>boolean left,up,right,down;<br>boolean live = true;<br>int stepTime = 0;//计时器<br>static final int fresh = 10;<br>private boolean jumpState = false;// 跳跃状态<br>private final int JUMP_HIGHT = 100;// 跳起最大高度<br>private final int LOWEST_Y = 220;// 落地最低坐标<br>private int jumpValue = 0;// 跳跃的增变量</p><pre><code>Image   dinasaurImg  = GameUtil.getImage(&quot;images/long1.png&quot;);
-Image   dinasaurImg2  = GameUtil.getImage(&quot;images/long2.png&quot;);
-Image image2;
-public  void  drawSelf(Graphics  g){
-    if(live){
-            g.drawImage(img, (int)x,(int) y, null);
+}</code></pre><blockquote><p>常量设置模块</p></blockquote><pre><code>package wen.ming.game;
 
-            if(left){
-                x -=speed;
-            }
-            if(right){
-                x += speed;
-            }
-            if(up){
-                y -=speed;    //y = y-speed;
-            }
-            if(down){
-                y += speed;
-        }
-    }else{
-
-    }    
-
+public class Constant {
+    public static final int GAME_WIDTH = 793;
+    public static final  int  GAME_HEIGHT = 324;
 }
-    public  Dinasaur(Image  img, double x, double y){
+</code></pre><blockquote><p>恐龙对象的创建</p></blockquote><pre><code>package wen.ming.game;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Rectangle;
+import java.awt.event.KeyEvent;
+
+public class Dinasaur extends GameObject {
+    boolean  left,up,right,down;
+    boolean  live = true;  
+    int stepTime = 0;//计时器
+    static final int fresh = 10;
+    private boolean jumpState = false;// 跳跃状态
+    private final int JUMP_HIGHT = 100;// 跳起最大高度
+    private final int LOWEST_Y = 220;// 落地最低坐标
+    private int jumpValue = 0;// 跳跃的增变量
+
+    Image   dinasaurImg  = GameUtil.getImage(&quot;images/long1.png&quot;);
+    Image   dinasaurImg2  = GameUtil.getImage(&quot;images/long2.png&quot;);
+    Image image2;
+    public  void  drawSelf(Graphics  g){
+        if(live){
+                g.drawImage(img, (int)x,(int) y, null);
+
+                if(left){
+                    x -=speed;
+                }
+                if(right){
+                    x += speed;
+                }
+                if(up){
+                    y -=speed;    //y = y-speed;
+                }
+                if(down){
+                    y += speed;
+            }
+        }else{
+
+        }    
+
+    }
+        public  Dinasaur(Image  img, double x, double y){
+            this.img = img;
+            this.x = x+3;
+            this.y = y+3;
+            this.speed = 3;
+            this.width = img.getWidth(null) ;
+            this.height = img.getHeight(null);
+
+        }
+
+         public void move() {
+                step();// 不断踏步
+                if (jumpState) {// 如果正在跳跃
+                    if (y &gt;= LOWEST_Y) {// 如果纵坐标大于等于最低点
+                        jumpValue = -14;// 增变量为负值
+                    }
+                    if (y &lt;= LOWEST_Y - JUMP_HIGHT) {// 如果跳过最高点
+                        jumpValue = 14;// 增变量为正值
+                    }
+                    y += jumpValue;// 纵坐标发生变化
+                    if (y &gt;= LOWEST_Y) {// 如果再次落地
+                        jumpState = false;// 停止跳跃
+                    }
+                }
+            }
+         void step() {
+                int tmp = stepTime / 100 % 2;
+                if (tmp == 1) {
+                    image2 = dinasaurImg;
+                } else {
+                    image2 = dinasaurImg2;
+                }
+
+                stepTime += fresh;
+
+            }
+         public void jump() {
+
+                jumpState = true;// 处于跳跃状态
+            }
+
+             public void left() {
+                x -= 5;
+            }
+            public void right() {
+                x += 5;
+            }
+            public void up() {
+                y -= 5;
+            }
+            public void down() {
+                y += 5;
+            }
+
+        //按下某个键，增加相应的方向
+        public  void   addDirection(KeyEvent  e){
+            switch (e.getKeyCode()) {
+            case KeyEvent.VK_LEFT:
+                left = true;
+                break;
+            case KeyEvent.VK_UP:
+                up = true;
+                break;
+            case KeyEvent.VK_RIGHT:
+                right = true;
+                break;
+            case KeyEvent.VK_DOWN:
+                down = true;
+                break;
+            }
+        }
+
+        //按下某个键，取消相应的方向
+            public  void   minusDirection(KeyEvent  e){
+                switch (e.getKeyCode()) {
+                case KeyEvent.VK_LEFT:
+                    left = false;
+                    break;
+                case KeyEvent.VK_UP:
+                    up = false;
+                    break;
+                case KeyEvent.VK_RIGHT:
+                    right = false;
+                    break;
+                case KeyEvent.VK_DOWN:
+                    down = false;
+                    break;
+                }
+            }
+
+            public  Rectangle   getRect(){
+//                return  new Rectangle((int)x+10,(int)y,20,10);
+                return  new Rectangle((int)x, (int)y, width, height);
+            }
+}
+</code></pre><blockquote><p>游戏物体对象</p></blockquote><pre><code>package wen.ming.game;
+
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Rectangle;
+
+/**
+ * 游戏物体的父类
+ * @author MingRong
+ *
+ */
+public class GameObject {
+      Image  img;
+      double  x,y;
+       int   speed;
+      int  width, height;
+
+    public  void  drawSelf(Graphics  g){
+        g.drawImage(img, (int)x,(int) y, null);
+    }
+
+    public GameObject(Image img, double x, double y, int speed, int width, int height) {
+        super();
         this.img = img;
-        this.x = x+3;
-        this.y = y+3;
+        this.x = x;
+        this.y = y;
+        this.speed = speed;
+        this.width = width;
+        this.height = height;
+    }
+
+    public GameObject(Image img, double x, double y) {
+        super();
+        this.img = img;
+        this.x = x;
+        this.y = y;
+    }
+
+    public GameObject() {
+    }
+
+    /**
+     * 返回物体所在的矩形。便于后续的碰撞检测
+     * @return
+     */
+    public  Rectangle   getRect(){
+        return  new Rectangle((int)x+20,(int)y,20,10);
+    }
+}
+</code></pre><blockquote><p>返回指定路径文件的图片对象</p></blockquote><pre><code>package wen.ming.game;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.net.URL;
+import javax.imageio.ImageIO;
+
+public class GameUtil {
+    // 工具类最好将构造器私有化。
+    private GameUtil() {
+    } 
+
+    /**
+     * 返回指定路径文件的图片对象
+     * @param path
+     * @return
+     */
+    public static Image getImage(String path) {
+        BufferedImage bi = null;
+        try {
+            URL u = GameUtil.class.getClassLoader().getResource(path);
+            bi = ImageIO.read(u);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return bi;
+    }
+}</code></pre><blockquote><p>游戏主界面</p></blockquote><pre><code>package wen.ming.game;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Frame;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.image.BufferedImage;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+/**
+ *
+ * @author MingRong
+ *
+ */
+public class MyGameFrame  extends  Frame {
+     private BufferedImage image;         
+     private Graphics2D g2;
+
+    Image   planeImg  = GameUtil.getImage(&quot;images/long1.png&quot;);
+    Image   planeImg2  = GameUtil.getImage(&quot;images/long2.png&quot;);
+    Image   bgImg1  = GameUtil.getImage(&quot;images/map.png&quot;);
+    Image   bgImg2  = GameUtil.getImage(&quot;images/map1.png&quot;);
+    Image   bg  = GameUtil.getImage(&quot;images/map1.png&quot;);
+    Image   obstacleImg  = GameUtil.getImage(&quot;images/cactus03.png&quot;);
+    Image   overImg  = GameUtil.getImage(&quot;images/game_over.png&quot;);
+    private Dinasaur dinasaur = new Dinasaur(planeImg, 250, 225);
+    private object obj = new object(obstacleImg,250,225);//
+    private BackgroundImage background = new BackgroundImage();
+    int stepTime = 0;      
+    static final int fresh = 10;
+    boolean live = true;
+    int count = 0;
+    @Override
+    public void paint(Graphics g) {    
+        if (live) {
+            obj.randomplace();
+            background.roll();
+            dinasaur.move();
+            Color   c =  g.getColor();
+            g.drawImage(bgImg2, (int)background.x1, (int)background.y2, this);
+            g.drawImage(obj.obstacle, obj.x, obj.y, this);
+            g.drawImage(planeImg, 0, 0, null);
+            g.drawImage(dinasaur.image2, (int)dinasaur.x, (int)dinasaur.y, this);
+            boolean  peng = dinasaur.getRect().intersects(obj.getRect());
+            if (peng) {
+                count+=1;
+                g.drawImage(overImg, (int)background.x1, (int)background.y2, this);
+                System.out.print(&quot;ruin&quot;);
+                if (count ==3) {
+                    live = false;
+                }
+            }
+            stepTime += fresh;
+            g.setColor(c); 
+        }
+        }
+    /**
+     * 刷新贞
+     * @author Mingrong
+     *
+     */
+    class  PaintThread  extends  Thread  {
+        @Override
+        public void run() {
+            while(true){
+                repaint();        
+
+                try {
+                    Thread.sleep(40);       //1s=1000ms
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }        
+            }
+        }
+
+    }
+
+
+    class   KeyMonitor extends  KeyAdapter  {
+
+        @Override
+        public void keyPressed(KeyEvent e) {
+//            dinasaur.addDirection(e);
+              int code = e.getKeyCode();
+
+                if (code == KeyEvent.VK_LEFT) {
+                    dinasaur.left();
+                }
+                if (code == KeyEvent.VK_RIGHT) {
+                    dinasaur.right();
+                }
+                if (code == KeyEvent.VK_UP) {
+                    dinasaur.up();
+                }
+                if (code == KeyEvent.VK_DOWN) {
+                    dinasaur.down();
+                }
+                if (code == KeyEvent.VK_SPACE) {
+                    dinasaur.jump();
+                }
+        }
+
+        @Override
+        public void keyReleased(KeyEvent e) {
+
+            dinasaur.minusDirection(e);
+        }
+    }
+
+    public  void  launchFrame(){
+        this.setTitle(&quot;game&quot;);
+        this.setVisible(true);
+        this.setSize(Constant.GAME_WIDTH    , Constant.GAME_HEIGHT);
+        this.setLocation(500, 500);
+        this.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                System.exit(0);
+            }
+        });
+        new PaintThread().start();    
+        addKeyListener(new KeyMonitor());   
+    }
+
+    public static void main(String[] args) {
+        MyGameFrame  f = new MyGameFrame();
+        f.launchFrame();
+    }
+    private Image offScreenImage = null;
+    public void update(Graphics g) {
+        if(offScreenImage == null)
+            offScreenImage = this.createImage(Constant.GAME_WIDTH,Constant.GAME_HEIGHT);
+        Graphics gOff = offScreenImage.getGraphics();
+        paint(gOff);
+        g.drawImage(offScreenImage, 0, 0, null);
+    }
+}
+</code></pre><blockquote><p>障碍物类</p></blockquote><pre><code>package wen.ming.game;
+
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.util.Random;
+
+public class object extends GameObject {
+
+    Random r = new Random();
+    public int x = 500;
+    public int x2 = 50;
+    public int y = 225;
+    public boolean judge=false;
+
+    public static final int SPEED = 11;// 滚动速度
+    int temp = r.nextInt(4) + 1;//1-2-3
+    Image obstacle;
+    Image   obstacleImg  = GameUtil.getImage(&quot;images/cactus01.png&quot;);
+    Image   obstacleImg2  = GameUtil.getImage(&quot;images/cactus03.png&quot;);
+    int stepTime = 0;//计时器
+    static final int fresh = 10;
+    public  object(Image  img, double x, double y){
+        this.img = img;
+        this.x = (int)x;
+        this.y = (int)y;
         this.speed = 3;
         this.width = img.getWidth(null) ;
         this.height = img.getHeight(null);
 
     }
 
-     public void move() {
-            step();// 不断踏步
-            if (jumpState) {// 如果正在跳跃
-                if (y &gt;= LOWEST_Y) {// 如果纵坐标大于等于最低点
-                    jumpValue = -14;// 增变量为负值
-                }
-                if (y &lt;= LOWEST_Y - JUMP_HIGHT) {// 如果跳过最高点
-                    jumpValue = 14;// 增变量为正值
-                }
-                y += jumpValue;// 纵坐标发生变化
-                if (y &gt;= LOWEST_Y) {// 如果再次落地
-                    jumpState = false;// 停止跳跃
-                }
-            }
-        }
-     void step() {
-            int tmp = stepTime / 100 % 2;
+    public object() {
+        this.x =500;
+        this.width = img.getWidth(null) ;
+        this.height = img.getHeight(null);
+    }
+    public void randomplace() {
+          int tmp = stepTime / 100 % 20;
             if (tmp == 1) {
-                image2 = dinasaurImg;
+                obstacle = obstacleImg;
             } else {
-                image2 = dinasaurImg2;
+                obstacle = obstacleImg2;
             }
 
             stepTime += fresh;
+          x -= SPEED;// 第一幅图片左移
 
-        }
-     public void jump() {
-
-            jumpState = true;// 处于跳跃状态
-        }
-
-         public void left() {
-            x -= 5;
-        }
-        public void right() {
-            x += 5;
-        }
-        public void up() {
-            y -= 5;
-        }
-        public void down() {
-            y += 5;
-        }
-
-    //按下某个键，增加相应的方向
-    public  void   addDirection(KeyEvent  e){
-        switch (e.getKeyCode()) {
-        case KeyEvent.VK_LEFT:
-            left = true;
-            break;
-        case KeyEvent.VK_UP:
-            up = true;
-            break;
-        case KeyEvent.VK_RIGHT:
-            right = true;
-            break;
-        case KeyEvent.VK_DOWN:
-            down = true;
-            break;
-        }
-    }
-
-    //按下某个键，取消相应的方向
-        public  void   minusDirection(KeyEvent  e){
-            switch (e.getKeyCode()) {
-            case KeyEvent.VK_LEFT:
-                left = false;
-                break;
-            case KeyEvent.VK_UP:
-                up = false;
-                break;
-            case KeyEvent.VK_RIGHT:
-                right = false;
-                break;
-            case KeyEvent.VK_DOWN:
-                down = false;
-                break;
-            }
-        }
-
-        public  Rectangle   getRect(){</code></pre><p>// return new Rectangle((int)x+10,(int)y,20,10);<br>return new Rectangle((int)x, (int)y, width, height);<br>}<br>}</p><pre><code>
-&gt;游戏物体对象</code></pre><p>package wen.ming.game;</p><p>import java.awt.Graphics;<br>import java.awt.Image;<br>import java.awt.Rectangle;</p><p>/**</p><ul><li><p>游戏物体的父类</p></li><li><p>@author MingRong</p></li><li></li><li><p>/<br>public class GameObject {</p><pre><code>Image  img;
-double  x,y;
- int   speed;
-int  width, height;</code></pre><p>public void drawSelf(Graphics g){</p><pre><code>  g.drawImage(img, (int)x,(int) y, null);</code></pre><p>}</p><p>public GameObject(Image img, double x, double y, int speed, int width, int height) {</p><pre><code>  super();
-  this.img = img;
-  this.x = x;
-  this.y = y;
-  this.speed = speed;
-  this.width = width;
-  this.height = height;</code></pre><p>}</p><p>public GameObject(Image img, double x, double y) {</p><pre><code>  super();
-  this.img = img;
-  this.x = x;
-  this.y = y;</code></pre><p>}</p><p>public GameObject() {<br>}</p><p>/**</p><ul><li>返回物体所在的矩形。便于后续的碰撞检测</li><li>@return</li><li>/<br>public Rectangle getRect(){<br>return new Rectangle((int)x+20,(int)y,20,10);<br>}<br>}</li></ul></li></ul><pre><code>&gt; 返回指定路径文件的图片对象</code></pre><p>package wen.ming.game;<br>import java.awt.Image;<br>import java.awt.image.BufferedImage;<br>import java.io.IOException;<br>import java.net.URL;<br>import javax.imageio.ImageIO;</p><p>public class GameUtil {<br>// 工具类最好将构造器私有化。<br>private GameUtil() {<br>}</p><pre><code>/**
- * 返回指定路径文件的图片对象
- * @param path
- * @return
- */
-public static Image getImage(String path) {
-    BufferedImage bi = null;
-    try {
-        URL u = GameUtil.class.getClassLoader().getResource(path);
-        bi = ImageIO.read(u);
-    } catch (IOException e) {
-        e.printStackTrace();
-    }
-    return bi;
-}</code></pre><p>}</p><pre><code>&gt;游戏主界面</code></pre><p>package wen.ming.game;<br>import java.awt.Color;<br>import java.awt.Font;<br>import java.awt.Frame;<br>import java.awt.Graphics;<br>import java.awt.Graphics2D;<br>import java.awt.Image;<br>import java.awt.event.KeyAdapter;<br>import java.awt.event.KeyEvent;<br>import java.awt.event.WindowAdapter;<br>import java.awt.event.WindowEvent;<br>import java.awt.image.BufferedImage;<br>import java.util.ArrayList;<br>import java.util.Date;<br>import java.util.List;</p><p>/**<br>*</p><ul><li><p>@author MingRong</p></li><li></li><li><p>/<br>public class MyGameFrame extends Frame {<br>private BufferedImage image;<br>private Graphics2D g2;</p><p>Image planeImg = GameUtil.getImage(“images/long1.png”);<br>Image planeImg2 = GameUtil.getImage(“images/long2.png”);<br>Image bgImg1 = GameUtil.getImage(“images/map.png”);<br>Image bgImg2 = GameUtil.getImage(“images/map1.png”);<br>Image bg = GameUtil.getImage(“images/map1.png”);<br>Image obstacleImg = GameUtil.getImage(“images/cactus03.png”);<br>Image overImg = GameUtil.getImage(“images/game_over.png”);<br>private Dinasaur dinasaur = new Dinasaur(planeImg, 250, 225);<br>private object obj = new object(obstacleImg,250,225);//<br>private BackgroundImage background = new BackgroundImage();<br>int stepTime = 0;<br>static final int fresh = 10;<br>boolean live = true;<br>int count = 0;<br>@Override<br>public void paint(Graphics g) {</p><pre><code>  if (live) {
-      obj.randomplace();
-      background.roll();
-      dinasaur.move();
-      Color   c =  g.getColor();
-      g.drawImage(bgImg2, (int)background.x1, (int)background.y2, this);
-      g.drawImage(obj.obstacle, obj.x, obj.y, this);
-      g.drawImage(planeImg, 0, 0, null);
-      g.drawImage(dinasaur.image2, (int)dinasaur.x, (int)dinasaur.y, this);
-      boolean  peng = dinasaur.getRect().intersects(obj.getRect());
-      if (peng) {
-          count+=1;
-          g.drawImage(overImg, (int)background.x1, (int)background.y2, this);
-          System.out.print(&quot;ruin&quot;);
-          if (count ==3) {
-              live = false;
+          if (x &lt;= -500) {// 如果第一幅图片移出屏幕
+              x =500;// 回到屏幕右侧
           }
-      }
-      stepTime += fresh;
-      g.setColor(c); 
-  }
-  }</code></pre><p>/**</p><ul><li><p>刷新贞</p></li><li><p>@author Mingrong</p></li><li></li><li><p>/<br>class PaintThread extends Thread {<br>@Override<br>public void run() {</p><pre><code>  while(true){
-      repaint();        
 
-      try {
-          Thread.sleep(40);       //1s=1000ms
-      } catch (InterruptedException e) {
-          e.printStackTrace();
-      }        
-  }</code></pre><p>}</p><p>}</p></li></ul></li></ul><pre><code>class   KeyMonitor extends  KeyAdapter  {
-
-    @Override
-    public void keyPressed(KeyEvent e) {</code></pre><p>// dinasaur.addDirection(e);<br>int code = e.getKeyCode();</p><pre><code>            if (code == KeyEvent.VK_LEFT) {
-                dinasaur.left();
-            }
-            if (code == KeyEvent.VK_RIGHT) {
-                dinasaur.right();
-            }
-            if (code == KeyEvent.VK_UP) {
-                dinasaur.up();
-            }
-            if (code == KeyEvent.VK_DOWN) {
-                dinasaur.down();
-            }
-            if (code == KeyEvent.VK_SPACE) {
-                dinasaur.jump();
-            }
     }
+    public void moving() {
 
-    @Override
-    public void keyReleased(KeyEvent e) {
+             x -= SPEED;// 第一幅图片左移
 
-        dinasaur.minusDirection(e);
+             if (x &lt;= -500) {// 如果第一幅图片移出屏幕
+                 x =500;// 回到屏幕右侧
+             }
     }
-}
-
-public  void  launchFrame(){
-    this.setTitle(&quot;game&quot;);
-    this.setVisible(true);
-    this.setSize(Constant.GAME_WIDTH    , Constant.GAME_HEIGHT);
-    this.setLocation(500, 500);
-    this.addWindowListener(new WindowAdapter() {
-        @Override
-        public void windowClosing(WindowEvent e) {
-            System.exit(0);
-        }
-    });
-    new PaintThread().start();    
-    addKeyListener(new KeyMonitor());   
-}
-
-public static void main(String[] args) {
-    MyGameFrame  f = new MyGameFrame();
-    f.launchFrame();
-}
-private Image offScreenImage = null;
-public void update(Graphics g) {
-    if(offScreenImage == null)
-        offScreenImage = this.createImage(Constant.GAME_WIDTH,Constant.GAME_HEIGHT);
-    Graphics gOff = offScreenImage.getGraphics();
-    paint(gOff);
-    g.drawImage(offScreenImage, 0, 0, null);
-}</code></pre><p>}</p><pre><code>&gt;障碍物类</code></pre><p>package wen.ming.game;</p><p>import javax.imageio.ImageIO;<br>import java.awt.*;<br>import java.awt.image.BufferedImage;<br>import java.io.File;<br>import java.io.IOException;<br>import java.util.Random;</p><p>public class object extends GameObject {</p><pre><code>Random r = new Random();
-public int x = 500;
-public int x2 = 50;
-public int y = 225;
-public boolean judge=false;
-
-public static final int SPEED = 11;// 滚动速度
-int temp = r.nextInt(4) + 1;//1-2-3
-Image obstacle;
-Image   obstacleImg  = GameUtil.getImage(&quot;images/cactus01.png&quot;);
-Image   obstacleImg2  = GameUtil.getImage(&quot;images/cactus03.png&quot;);
-int stepTime = 0;//计时器
-static final int fresh = 10;
-public  object(Image  img, double x, double y){
-    this.img = img;
-    this.x = (int)x;
-    this.y = (int)y;
-    this.speed = 3;
-    this.width = img.getWidth(null) ;
-    this.height = img.getHeight(null);
-
-}
-
-public object() {
-    this.x =500;
-    this.width = img.getWidth(null) ;
-    this.height = img.getHeight(null);
-}
-public void randomplace() {
-      int tmp = stepTime / 100 % 20;
-        if (tmp == 1) {
-            obstacle = obstacleImg;
-        } else {
-            obstacle = obstacleImg2;
-        }
-
-        stepTime += fresh;
-      x -= SPEED;// 第一幅图片左移
-
-      if (x &lt;= -500) {// 如果第一幅图片移出屏幕
-          x =500;// 回到屏幕右侧
-      }
-
-}
-public void moving() {
-
-         x -= SPEED;// 第一幅图片左移
-
-         if (x &lt;= -500) {// 如果第一幅图片移出屏幕
-             x =500;// 回到屏幕右侧
-         }
-}
-public  Rectangle   getRect(){</code></pre><p>// return new Rectangle((int)x+10,(int)y,20,10);<br>return new Rectangle((int)x, (int)y, width, height);<br>}<br>}<br>```</p><hr></div><br><div><p><span><i class="iconfont icon-tag"></i> <a class="hover-with-bg" href="/tags/Java%E5%AE%9E%E7%8E%B0%E8%B0%B7%E6%AD%8C%E6%81%90%E9%BE%99%E6%B8%B8%E6%88%8F">Java实现谷歌恐龙游戏</a></span></p><p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p></div></div></div></div><div class="d-none d-lg-block col-lg-2 toc-container"><div id="toc"><p class="h4"><i class="far fa-list-alt"></i>&nbsp;TOC</p><div id="tocbot"></div></div></div></div></div><div class="col-lg-7 mx-auto nopadding-md"><div class="container comments mx-auto" id="comments"></div></div></main><a class="z-depth-1" id="scroll-top-button" href="#" role="button"><i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i></a><div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg" role="document"><div class="modal-content"><div class="modal-header text-center"><h4 class="modal-title w-100 font-weight-bold">Search</h4><button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body mx-3"><div class="md-form mb-5"><input type="text" id="local-search-input" class="form-control validate"> <label data-error="x" data-success="v" for="local-search-input">keyword</label></div><div class="list-group" id="local-search-result"></div></div></div></div></div><footer class="mt-5"><div class="text-center py-3"><a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><b>Fluid</b></a><br>&nbsp;<span id="busuanzi_container_site_pv"></span>总访问量 <span id="busuanzi_value_site_pv"></span> 次&nbsp; &nbsp;<span id="busuanzi_container_site_uv"></span>总访客数 <span id="busuanzi_value_site_uv"></span> 人&nbsp;<br></div></footer><script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script><script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script><script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script><script src="https://cdn.staticfile.org/mdbootstrap/4.8.9/js/mdb.min.js"></script><script src="/js/main.js"></script><script src="/js/lazyload.js"></script><script src="https://cdn.staticfile.org/tocbot/4.8.0/tocbot.min.js"></script><script src="/js/post.js"></script><script src="https://cdn.staticfile.org/smooth-scroll/16.1.0/smooth-scroll.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.staticfile.org/prettify/r298/prettify.min.js"></script><script>$(document).ready(function(){$("pre").addClass("prettyprint  linenums"),prettyPrint()})</script><script src="https://cdn.staticfile.org/typed.js/2.0.10/typed.min.js"></script><script>var typed=new Typed("#subtitle",{strings:["  ","GoogleGame&nbsp;"],cursorChar:"_",typeSpeed:70,loop:!1});typed.stop(),$(document).ready(function(){$(".typed-cursor").addClass("h2"),typed.start()})</script><script src="https://cdn.staticfile.org/anchor-js/4.2.0/anchor.min.js"></script><script>anchors.options = {
+    public  Rectangle   getRect(){
+//        return  new Rectangle((int)x+10,(int)y,20,10);
+        return  new Rectangle((int)x, (int)y, width, height);
+    }
+ }</code></pre><hr></div><br><div><p><span><i class="iconfont icon-tag"></i> <a class="hover-with-bg" href="/tags/Java%E5%AE%9E%E7%8E%B0%E8%B0%B7%E6%AD%8C%E6%81%90%E9%BE%99%E6%B8%B8%E6%88%8F">Java实现谷歌恐龙游戏</a></span></p><p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p></div></div></div></div><div class="d-none d-lg-block col-lg-2 toc-container"><div id="toc"><p class="h4"><i class="far fa-list-alt"></i>&nbsp;TOC</p><div id="tocbot"></div></div></div></div></div><div class="col-lg-7 mx-auto nopadding-md"><div class="container comments mx-auto" id="comments"></div></div></main><a class="z-depth-1" id="scroll-top-button" href="#" role="button"><i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i></a><div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable modal-lg" role="document"><div class="modal-content"><div class="modal-header text-center"><h4 class="modal-title w-100 font-weight-bold">Search</h4><button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body mx-3"><div class="md-form mb-5"><input type="text" id="local-search-input" class="form-control validate"> <label data-error="x" data-success="v" for="local-search-input">keyword</label></div><div class="list-group" id="local-search-result"></div></div></div></div></div><footer class="mt-5"><div class="text-center py-3"><a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><b>Fluid</b></a><br>&nbsp;<span id="busuanzi_container_site_pv"></span>总访问量 <span id="busuanzi_value_site_pv"></span> 次&nbsp; &nbsp;<span id="busuanzi_container_site_uv"></span>总访客数 <span id="busuanzi_value_site_uv"></span> 人&nbsp;<br></div></footer><script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script><script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script><script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script><script src="https://cdn.staticfile.org/mdbootstrap/4.8.9/js/mdb.min.js"></script><script src="/js/main.js"></script><script src="/js/lazyload.js"></script><script src="https://cdn.staticfile.org/tocbot/4.8.0/tocbot.min.js"></script><script src="/js/post.js"></script><script src="https://cdn.staticfile.org/smooth-scroll/16.1.0/smooth-scroll.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.staticfile.org/prettify/r298/prettify.min.js"></script><script>$(document).ready(function(){$("pre").addClass("prettyprint  linenums"),prettyPrint()})</script><script src="https://cdn.staticfile.org/typed.js/2.0.10/typed.min.js"></script><script>var typed=new Typed("#subtitle",{strings:["  ","GoogleGame&nbsp;"],cursorChar:"_",typeSpeed:70,loop:!1});typed.stop(),$(document).ready(function(){$(".typed-cursor").addClass("h2"),typed.start()})</script><script src="https://cdn.staticfile.org/anchor-js/4.2.0/anchor.min.js"></script><script>anchors.options = {
       placement: "right",
       visible: "false",
       
